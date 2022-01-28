@@ -12,6 +12,8 @@ import { Observable, catchError, of } from 'rxjs';
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent {
+  logoCards='../../assets/imagens/logoBS4.png';
+
   cards$: Observable<Dashboard[]>;
   usuario$= this.autenticacaoFirebaseService.usuarioLogado$;
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(

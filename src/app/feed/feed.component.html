@@ -5,7 +5,9 @@
     <mat-grid-tile *ngFor="let card of cards$ | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
+          <div mat-card-avatar class="example-header-image">
+            <img mat-card-image [src]="logoCards">
+          </div>
           <mat-card-title>{{card.titulo}}</mat-card-title>
           <mat-card-subtitle>{{card.subtitulo}}</mat-card-subtitle>
         </mat-card-header>
