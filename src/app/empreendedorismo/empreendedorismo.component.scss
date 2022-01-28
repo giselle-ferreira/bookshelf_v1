@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+}
+
+.imgLivro {
+  width: 6.25rem;
+  margin: 1rem;
+}
+
+.titLivro {
+  font-weight: 500;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.descLivro {
+  margin: 1.8rem 1.8rem 1.8rem 0;
+  text-align: justify;
+  line-height: 1.38rem;
+}
+
+.autorLivro {
+  margin-right: 1.8rem;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.loading-spinner{
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+

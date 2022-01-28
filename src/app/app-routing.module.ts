@@ -1,3 +1,4 @@
+import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { FeedComponent } from './feed/feed.component';
 import { NgModule } from '@angular/core';
@@ -21,7 +22,11 @@ const routes: Routes = [
     path: 'cdd',
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
     ...canActivate(enviarSemLogin)
-  }
+  },
+  {
+    path: 'empreendedorismo', component: EmpreendedorismoComponent,
+    ...canActivate(enviarSemLogin)
+  },
 ];
 
 @NgModule({
