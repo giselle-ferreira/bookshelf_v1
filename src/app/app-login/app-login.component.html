@@ -9,26 +9,26 @@
     <img mat-card-image src="../../assets/imagens/4.png" alt="Banner de Login">
     <mat-card-content>
       <form [formGroup]="formularioLogin" (ngSubmit)="loginFirebase()">
-        <mat-form-field>
+        <mat-form-field class="inputLogin">
           <input matInput placeholder="E-mail de Login" formControlName="email">
           <!-- Correção de Português nos erros -->
-          <mat-error *ngIf="email?.errors?.['required']">É necessário informar um e-mail</mat-error>
+          <mat-error *ngIf="email?.errors?.['required']">É necessário informar um e-mail.</mat-error>
           <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail é inválido</mat-error>
         </mat-form-field>
         <mat-form-field>
           <!-- Correção de Português -->
           <input matInput placeholder="Senha" formControlName="senha" type="password">
           <!-- Correção de Português, adição de ponto de interrogação -->
-          <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha?</mat-error>
+          <mat-error *ngIf="senha?.errors?.['required']"><a routerLink="/app-app-cadastro">Esqueceu a senha?</a></mat-error>
         </mat-form-field>
         <mat-card-footer>
-          <button mat-raised-button color="accent" type="submit">Entrar</button>
-          <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
+          <button class="buttonLogin" mat-raised-button color="accent" type="submit">Entrar</button>
+          <button class="buttonClose" mat-raised-button mat-dialog-close color="primary">Fechar</button>
         </mat-card-footer>
       </form>
     </mat-card-content>
     <!-- Correção de Português -->
-    <span>Você ainda <strong>não tem cadastro?</strong> Clique <a routerLink="/app-app-cadastro">aqui</a>
-      e venha fazer parte desta comunidade de leitores!</span>
+    <span class="span">Você ainda <strong>não tem cadastro?</strong> Clique <a routerLink="/app-app-cadastro">aqui</a>
+    e venha fazer parte desta comunidade de leitores!</span>
   </mat-card>
 </div>
