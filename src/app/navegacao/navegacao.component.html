@@ -1,4 +1,83 @@
+
 <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu">
+    <p>
+      <button class="buttonEmail" color="accent" mat-raised-button matBadge="2" matBadgeSize="small"  *ngIf="usuario$ | async as usuario">
+        <mat-icon>account_circle</mat-icon> {{usuario.email}}
+      </button>
+    </p>
+
+    <mat-nav-list >
+      <div mat-list-item class="sectionMenu">
+        <h4>SEÇÕES</h4>
+      </div>
+      <div class="sectionItem" *ngFor="let itemMenu of itensMenu$ | async; index as i">
+        <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">
+          <mat-icon>arrow_right</mat-icon>{{itemMenu.labelMenu}}</a>
+        <mat-divider></mat-divider>
+      </div>
+
+      <!-- Top 10 Literário -->
+      <div mat-list-item class="sectionMenu">
+        <h4>TOP 10 LITERÁRIO</h4>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="catTop10" *ngFor="let itemMenu of itensMenuTop10$ | async; index as in">
+       <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">
+         <mat-icon>arrow_right</mat-icon>{{itemMenu.labelMenu}}</a>
+      <mat-divider></mat-divider>
+      </div>
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Menu BookShelf Lateral">menu</mat-icon>
+      </button>
+      <img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral">
+      <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
+        <button mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
+          <mat-icon class="mat-18">account_circle</mat-icon>
+          {{usuario.displayName}}
+          <mat-icon class="more">more_vert</mat-icon>
+        </button>
+      </ng-container>
+      <ng-template #botaoLogin>
+        <button mat-raised-button color="primary" (click)="abrirLogin('Faça seu Login')">
+          <mat-icon class="mat-18">login</mat-icon>
+          LOGIN
+        </button>
+      </ng-template>
+    </mat-toolbar>
+    <mat-menu #usuarioMenu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>account_box</mat-icon>
+        <span>Meu perfil</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>favorite_border</mat-icon>
+        <span>Meus favoritos</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Configurações</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>help_outline</mat-icon>
+        <span>Ajuda</span>
+      </button>
+      <button mat-menu-item (click)="sairUsuario()">
+        <mat-icon>power_settings_new</mat-icon>
+        <span>Sair</span>
+      </button>
+    </mat-menu>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container><mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu">
