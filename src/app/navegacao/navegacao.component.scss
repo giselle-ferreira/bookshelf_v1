@@ -46,7 +46,9 @@ mat-icon {
 }
 
 .buttonEmail {
-  margin-left: 0.7rem;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 11px;
 }
 
@@ -59,4 +61,14 @@ mat-icon {
   .small-icon {
     display: none;
   }
+}
+// Dimensionamento da imagem
+.avatar-edit {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
 }

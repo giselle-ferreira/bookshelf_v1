@@ -10,6 +10,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
+import { url } from 'inspector';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
 export function passwordMatchValidator(): ValidatorFn {
@@ -38,6 +39,7 @@ export class AppCadastroComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       senha: new FormControl('', Validators.required),
       confirmaSenha: new FormControl('', Validators.required),
+      url: new FormControl('', Validators.required),
     },
     { validators: passwordMatchValidator() }
   );
@@ -65,13 +67,17 @@ export class AppCadastroComponent implements OnInit {
     return this.formularioCadastro.get('confirmaSenha');
   }
 
+  get url() {
+    return this.formularioCadastro.get('url');
+  }
+
   enviaCadastro() {
     if (!this.formularioCadastro.valid) {
       return;
     }
-    const { nome, email, senha } = this.formularioCadastro.value;
+    const { nome, email, senha, url } = this.formularioCadastro.value;
     this.autenticacaoFirebaseService
-      .cadastrarUsuario(nome, email, senha)
+      .cadastrarUsuario(nome, email, senha, url)
       .pipe(
         this.toast.observe({
           // Correção de Português no Toast
@@ -92,6 +98,7 @@ export class AppCadastroComponent implements OnInit {
       email: new FormControl(''),
       senha: new FormControl(''),
       confirmaSenha: new FormControl(''),
+      url: new FormControl(''),
     });
     this.formularioCadastro.reset();
   }

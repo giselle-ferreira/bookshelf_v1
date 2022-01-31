@@ -5,22 +5,31 @@
     <img mat-card-image src="../../assets/imagens/cover2.png" alt="Cover do Cadastro de Usuários">
     <form [formGroup]="formularioCadastro" (ngSubmit)="enviaCadastro()">
       <mat-form-field>
+        <!-- Nome -->
         <input matInput placeholder="Digite o seu nome" formControlName="nome">
         <mat-error *ngIf="nome?.errors?.['required']">É necessário informar seu nome</mat-error>
       </mat-form-field>
+      <!-- E-mail -->
       <mat-form-field>
         <input matInput placeholder="E-mail de Login" formControlName="email">
         <mat-error *ngIf="email?.errors?.['required']">É necessário informar um e-mail</mat-error>
         <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail é inválido</mat-error>
       </mat-form-field>
+      <!-- Senha -->
       <mat-form-field>
         <input matInput placeholder="Senha" formControlName="senha" type="password">
         <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha?</mat-error>
       </mat-form-field>
+      <!-- Confirmar a senha -->
       <mat-form-field>
         <input matInput placeholder="Confirme a senha" formControlName="confirmaSenha" type="password">
         <mat-error *ngIf="senha?.errors?.['required']">Entre com a confirmação</mat-error>
         <mat-error *ngIf="formularioCadastro.errors?.['senhaConfirmada']">Entre com a confirmação</mat-error>
+      </mat-form-field>
+      <!-- URL -->
+      <mat-form-field>
+        <input matInput placeholder="Insira o URL da sua foto" formControlName="url">
+        <mat-error *ngIf="url?.errors?.['required']">URL é obrigatória</mat-error>
       </mat-form-field>
       <mat-card-footer>
         <button mat-button color="accent" type="submit">Cadastrar</button>

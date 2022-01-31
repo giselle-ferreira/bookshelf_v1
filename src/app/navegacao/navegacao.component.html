@@ -2,8 +2,11 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu">
+    <div>
+      <img src={{usuario.photoURL}} class="avatar-edit" *ngIf="usuario$ | async as usuario">
+    </div>
     <p>
-      <button class="buttonEmail" color="accent" mat-raised-button matBadge="2" matBadgeSize="small"  *ngIf="usuario$ | async as usuario">
+      <button class="buttonEmail" color="accent" mat-raised-button matBadge="2" matBadgeSize="small" *ngIf="usuario$ | async as usuario">
         <mat-icon>account_circle</mat-icon> {{usuario.email}}
       </button>
     </p>
