@@ -10,7 +10,6 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
-import { url } from 'inspector';
 import { AutenticacaoFirebaseService } from './../servicosInterface/autenticacao-firebase.service';
 
 export function passwordMatchValidator(): ValidatorFn {
