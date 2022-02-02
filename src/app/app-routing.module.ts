@@ -1,3 +1,4 @@
+import { LivrosVestibularComponent } from './livros-vestibular/livros-vestibular.component';
 import { AppPaginaUsuarioComponent } from './app-pagina-usuario/app-pagina-usuario.component';
 import { NgModule } from '@angular/core';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
@@ -96,6 +97,9 @@ const routes: Routes = [
   },
   {
     path: 'wiki', component: WikiComponent,
+  },
+  {
+    path: 'vestibular', component: LivrosVestibularComponent,
   },
   {
     path: '**', component: NotFoundComponent

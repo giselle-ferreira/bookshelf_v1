@@ -49,10 +49,11 @@ import { AppPaginaUsuarioComponent } from './app-pagina-usuario/app-pagina-usuar
 import { BrasilEMundoComponent } from './brasil-emundo/brasil-emundo.component';
 import { WikiComponent } from './wiki/wiki.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { LivrosVestibularComponent } from './livros-vestibular/livros-vestibular.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     NavegacaoComponent,
     FeedComponent,
@@ -72,8 +73,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     IsbnComponent,
     AppPaginaUsuarioComponent,
     BrasilEMundoComponent,
-    WikiComponent
-  ],
+    WikiComponent,
+      LivrosVestibularComponent
+   ],
 
 
   imports: [

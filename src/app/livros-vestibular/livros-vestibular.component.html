@@ -1,0 +1,53 @@
+<div class="grid-container">
+
+
+  <h1>Vestibular 2002 </h1>
+  <h3>Lista de Livros das Principais Faculdades Brasileiras</h3>
+  <mat-card>
+    <mat-card-title>FGV</mat-card-title>
+    <mat-divider></mat-divider>
+    <div *ngFor="let livro of livrosFGV$ | async" class="painel">
+      <div>{{ livro.titulo }} | {{ livro.autor }}</div>
+    </div>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>FUVEST</mat-card-title>
+    <mat-divider></mat-divider>
+    <div *ngFor="let livro of livrosFuvest$ | async" class="painel">
+      <div>{{ livro.titulo }} | {{ livro.autor }}</div>
+    </div>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>ITA</mat-card-title>
+    <mat-divider></mat-divider>
+    <div *ngFor="let livro of livrosITA$ | async" class="painel">
+      <div>{{ livro.titulo }} | {{ livro.autor }}</div>
+    </div>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>PUC</mat-card-title>
+    <mat-divider></mat-divider>
+    <div *ngFor="let livro of livrosPUC$ | async" class="painel">
+      <div>{{ livro.titulo }} | {{ livro.autor }}</div>
+    </div>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>UERJ</mat-card-title>
+    <mat-divider></mat-divider>
+    <div *ngFor="let livro of livrosUERJ$ | async" class="painel">
+      <div>{{ livro.titulo }} | {{ livro.autor }}</div>
+    </div>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>UNICAMP</mat-card-title>
+    <mat-divider></mat-divider>
+    <div *ngFor="let livro of livrosUnicamp$ | async" class="painel">
+      <div>{{ livro.titulo }} | {{ livro.autor }}</div>
+    </div>
+  </mat-card>
+
