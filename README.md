@@ -37,13 +37,29 @@
 <br>
 <br>
 
-> ## Desenvolvedoras
+> ## Desenvolvedoras 🦸‍♀️
 
-- [Giselle Ferreira](https://github.com/giselle-ferreira) 
-- [Diana dos Santos](https://github.com/DianadosSantos) 
-- [Tamiris R. G. Costa](https://github.com/tamirisrgarcia) 
-- [Camila Silva](https://github.com/CamiMSilva) 
-- [Isabela Ribeiro](https://github.com/isamallow) 
+<p align="left">
+<img src="https://i.postimg.cc/QNp9YTHF/cami.png" width="138" title="Camila Silva"/>
+<img src="https://i.postimg.cc/QxhB2dT0/di.png" width="138" title="Diana dos Santos"/>
+<img src="https://i.postimg.cc/d1CkY76S/eu.png" width="138" title="Giselle Ferreira"/>
+<img src="https://i.postimg.cc/28GqrNdm/isa.png" width="138" title="Isabela Ribeiro"/>
+<img src="https://i.postimg.cc/y8NDNpnR/tami.png" width="138" title="Tamiris R. G. Costa"/>
+</p>  
+
+<p align="left">
+<a href="https://github.com/CamiMSilva" ><img src="https://img.shields.io/badge/-Github-lightgrey" height="26" ></a>
+<a href="https://www.linkedin.com/in/camila-s-658853222" ><img src="https://img.shields.io/badge/-Linkedin-blue" height="26" ></a>   
+<a href="https://github.com/DianadosSantos" ><img src="https://img.shields.io/badge/-Github-lightgrey" height="26" ></a>
+<a href="https://www.linkedin.com/in/diana-dos-santos-013a36220/" ><img src="https://img.shields.io/badge/-Linkedin-blue" height="26" ></a>  
+<a href="https://github.com/giselle-ferreira" ><img src="https://img.shields.io/badge/-Github-lightgrey" height="26" ></a> 
+<a href="https://www.linkedin.com/in/giselle-ferreira/" ><img src="https://img.shields.io/badge/-Linkedin-blue" height="26" ></a>  
+<a href="https://github.com/isamallow" ><img src="https://img.shields.io/badge/-Github-lightgrey" height="26" ></a>
+<a href="https://www.linkedin.com/in/isabela-ribeiro1211/" ><img src="https://img.shields.io/badge/-Linkedin-blue" height="26" ></a>   
+<a align="left" href="https://github.com/tamirisrgarcia" ><img src="https://img.shields.io/badge/-Github-lightgrey" height="26" ></a>
+<a align="left" href="https://www.linkedin.com/in/tamirisrezendegarciacosta/" ><img src="https://img.shields.io/badge/-Linkedin-blue" height="26" ></a>
+</p>  
+
 
 <br>
 <br>
